@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { ContactCTA } from "@/components/ContactCTA";
 import { stats } from "@/lib/content";
+import { withBase } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "About",
@@ -16,6 +17,7 @@ export default function AboutPage() {
     <>
       <Hero
         compact
+        motion="about"
         title="Precision as a discipline."
         description="We operate at the intersection of advanced fleet technology and personal service, keeping sensitive cargo moving with the same standard across every corridor."
         secondaryCta={{ href: "/contact", label: "Speak with us" }}
@@ -49,11 +51,12 @@ export default function AboutPage() {
 
           <div className="reveal-scale relative min-h-[340px] overflow-hidden bg-ink lg:min-h-full">
             <Image
-              src="/brand/operations.png"
+              src={withBase("/brand/operations.png")}
               alt="Orvian logistics operations"
               fill
               className="object-cover opacity-80 transition duration-[1.2s] hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 50vw"
+              unoptimized
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
             <p className="absolute bottom-6 left-6 right-6 font-display text-xl leading-snug text-white md:text-2xl">

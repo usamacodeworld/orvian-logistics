@@ -47,7 +47,15 @@ body {
 
 .font-display {
   font-family: var(--font-sulphur), var(--font-roboto), sans-serif;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
+  word-spacing: normal;
+}
+
+h1.font-display,
+h2.font-display,
+h3.font-display {
+  letter-spacing: 0;
+  word-spacing: 0;
 }
 
 .eyebrow {

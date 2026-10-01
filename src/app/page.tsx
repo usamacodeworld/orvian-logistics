@@ -7,11 +7,13 @@ import { ProcessSection } from "@/components/ProcessSection";
 import { ValuesSection } from "@/components/ValuesSection";
 import { ContactCTA } from "@/components/ContactCTA";
 import { stats, whyPoints } from "@/lib/content";
+import { withBase } from "@/lib/paths";
 
 export default function HomePage() {
   return (
     <>
       <Hero
+        motion="home"
         title="Commerce moves. We hold the line."
         description="End-to-end supply chain solutions tailored for businesses that require absolute precision, reliability, and security. Cold-chain excellence at the core, available around the clock."
       />
@@ -81,7 +83,7 @@ export default function HomePage() {
       <section className="promise-band relative overflow-hidden bg-ink text-white section-y">
         <div className="absolute inset-0 opacity-25">
           <Image
-            src="/brand/operations.png"
+            src={withBase("/brand/operations.png")}
             alt=""
             fill
             className="object-cover scale-105"

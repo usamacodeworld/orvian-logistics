@@ -15,6 +15,7 @@ export default function ContactPage() {
     <>
       <Hero
         compact
+        motion="contact"
         title="Speak with us directly."
         description="Orvian Group Logistics is available around the clock. First-time clients are invited to speak with a member of our team before any arrangement is made."
         primaryCta={{ href: site.whatsapp, label: "Message on WhatsApp" }}

@@ -16,6 +16,7 @@ export default function ServicesPage() {
     <>
       <Hero
         compact
+        motion="services"
         title="Built around you, never off the shelf."
         description="Each service is delivered with the same standard: precise, personal, and monitored. We do not offer packages. We offer your logistics plan."
         primaryCta={{ href: "/contact", label: "Request a brief" }}

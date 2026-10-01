@@ -17,6 +17,7 @@ export default function WhyOrvianPage() {
     <>
       <Hero
         compact
+        motion="why"
         title="Rare, on the client's terms."
         description="There is no shortage of logistics services. What is rare is depth of cold-chain capability paired with the discretion genuine high-value freight demands."
         primaryCta={{ href: "/contact", label: "Begin an enquiry" }}

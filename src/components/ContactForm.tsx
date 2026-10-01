@@ -27,7 +27,7 @@ export function ContactForm() {
   return (
     <div className="reveal border border-[var(--line)] bg-white p-7 md:p-10">
       <p className="eyebrow">Enquiry</p>
-      <h3 className="font-display mt-3 text-2xl tracking-wide">Send a brief</h3>
+      <h3 className="font-display mt-3 text-2xl">Send a brief</h3>
       <p className="mt-3 text-sm text-ink-soft/75">
         Opens your email client with the details below. For fastest response,
         WhatsApp is preferred.

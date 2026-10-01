@@ -5,7 +5,9 @@ import {
   HeroMotionBackground,
   HeroMotionDesktopPanels,
   HeroMotionMobileStrip,
+  type MotionTheme,
 } from "./HeroMotion";
+import { withBase } from "@/lib/paths";
 
 type Props = {
   eyebrow?: string;
@@ -15,6 +17,7 @@ type Props = {
   secondaryCta?: { href: string; label: string };
   compact?: boolean;
   imageSrc?: string;
+  motion?: MotionTheme;
 };
 
 function CtaLink({
@@ -55,6 +58,7 @@ export function Hero({
   secondaryCta = { href: "/services", label: "Explore services" },
   compact = false,
   imageSrc = "/brand/operations.png",
+  motion = "home",
 }: Props) {
   return (
     <section
@@ -64,19 +68,20 @@ export function Hero({
     >
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src={imageSrc}
+          src={withBase(imageSrc)}
           alt="Orvian Group Logistics operations"
           fill
           priority
           className="hero-image object-cover opacity-[0.42]"
           sizes="100vw"
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink from-0% via-ink/92 via-45% to-ink/55" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-transparent to-ink/50" />
       </div>
 
-      <HeroMotionBackground />
-      <HeroMotionDesktopPanels />
+      <HeroMotionBackground theme={motion} />
+      <HeroMotionDesktopPanels theme={motion} />
 
       <div
         className={`container-x relative z-10 flex ${
@@ -87,7 +92,7 @@ export function Hero({
       >
         <div className="hero-copy w-full max-w-[38rem] lg:max-w-[40rem]">
           <p className="eyebrow hero-anim hero-anim-1 !text-gold">{eyebrow}</p>
-          <h1 className="font-display hero-anim hero-anim-2 mt-4 text-[2.4rem] leading-[1.08] tracking-[0.01em] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.15rem]">
+          <h1 className="font-display hero-anim hero-anim-2 mt-4 text-[2.4rem] leading-[1.12] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.15rem]">
             {title}
           </h1>
           <p className="hero-anim hero-anim-3 mt-5 max-w-[34rem] text-[1rem] leading-[1.7] text-white/72 sm:mt-6 sm:text-[1.0625rem] md:text-lg md:leading-[1.7]">
@@ -108,7 +113,7 @@ export function Hero({
             </CtaLink>
           </div>
 
-          <HeroMotionMobileStrip />
+          <HeroMotionMobileStrip theme={motion} />
         </div>
       </div>
 
