@@ -6,25 +6,32 @@ type LogoProps = {
   className?: string;
 };
 
-/** Exact brand mark from Orvian Logistics Brand Guide (icon only). */
+/** Inline brand mark — no external asset path (works on GitHub Pages). */
+const MARK_SRC =
+  "data:image/svg+xml," +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="#CB802D" d="M8 20L48 6V48H18Z"/><path fill="#CB802D" d="M52 6L92 20L82 48H52Z"/><path fill="#CB802D" d="M18 52H48V94L8 80Z"/><path fill="#CB802D" d="M52 52H82L92 80L52 94Z"/></svg>`
+  );
+
 export function Logo({ className }: LogoProps) {
   return (
     <Link
       href="/"
-      className={clsx("group inline-flex shrink-0 items-center", className)}
+      className={clsx(
+        "relative z-20 inline-flex h-11 w-11 shrink-0 items-center justify-center",
+        className
+      )}
       aria-label="Orvian Group Logistics home"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11"
-        aria-hidden="true"
-      >
-        <path fill="#CB802D" d="M6 22L46 8V46H16L6 22Z" />
-        <path fill="#CB802D" d="M54 8L94 22L84 46H54V8Z" />
-        <path fill="#CB802D" d="M16 54H46V92L6 78L16 54Z" />
-        <path fill="#CB802D" d="M54 54H84L94 78L54 92V54Z" />
-      </svg>
+      <img
+        src={MARK_SRC}
+        alt="Orvian Group Logistics"
+        width={44}
+        height={44}
+        className="block h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11"
+        style={{ width: 44, height: 44, minWidth: 36, minHeight: 36 }}
+        decoding="async"
+      />
     </Link>
   );
 }

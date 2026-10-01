@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-  <path fill="#CB802D" d="M6 22L46 8V46H16L6 22Z"/>
-  <path fill="#CB802D" d="M54 8L94 22L84 46H54V8Z"/>
-  <path fill="#CB802D" d="M16 54H46V92L6 78L16 54Z"/>
-  <path fill="#CB802D" d="M54 54H84L94 78L54 92V54Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Orvian">
+  <path fill="#CB802D" d="M8 20 L48 6 L48 48 L18 48 Z"/>
+  <path fill="#CB802D" d="M52 6 L92 20 L82 48 L52 48 Z"/>
+  <path fill="#CB802D" d="M18 52 L48 52 L48 94 L8 80 Z"/>
+  <path fill="#CB802D" d="M52 52 L82 52 L92 80 L52 94 Z"/>
 </svg>
