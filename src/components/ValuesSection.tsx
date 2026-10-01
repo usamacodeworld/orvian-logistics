@@ -2,11 +2,11 @@ import { site } from "@/lib/content";
 
 const valueCopy = {
   Discretion:
-    "The foundation of trust. What passes through Orvian stays with Orvian—cargo details, client identity, and corridor intelligence alike.",
+    "The foundation of trust. What passes through Orvian stays with Orvian, cargo details, client identity, and corridor intelligence alike.",
   Precision:
     "The detail is never missed, the timing never approximate, the thermal threshold never variable. Precision is the minimum.",
   Elevation:
-    "Every touchpoint—from first message to final sign-off—should itself feel elevated. Using Orvian is part of the standard.",
+    "Every touchpoint, from first message to final sign-off, should itself feel elevated. Using Orvian is part of the standard.",
 } as const;
 
 export function ValuesSection() {

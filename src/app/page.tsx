@@ -13,7 +13,7 @@ export default function HomePage() {
     <>
       <Hero
         title="Commerce moves. We hold the line."
-        description="End-to-end supply chain solutions tailored for businesses that require absolute precision, reliability, and security—cold-chain excellence at the core, available around the clock."
+        description="End-to-end supply chain solutions tailored for businesses that require absolute precision, reliability, and security. Cold-chain excellence at the core, available around the clock."
       />
 
       <section id="about" className="scroll-mt-24 section-y bg-paper">
@@ -55,8 +55,7 @@ export default function HomePage() {
                   commerce moving seamlessly.
                 </p>
                 <p>
-                  At our core is premier temperature-controlled transportation—
-                  refrigerated units, dual-zone climate fleets, and real-time
+                  At our core is premier temperature-controlled transportation, refrigerated units, dual-zone climate fleets, and real-time
                   telemetry that protect pharmaceuticals, fine foods, and delicate
                   luxury inventory from dispatch to final sign-off.
                 </p>
@@ -103,7 +102,7 @@ export default function HomePage() {
               From city centres to international corridors, Orvian anticipates,
               arranges, and delivers. Rooted in operational discretion and rigorous
               compliance, we combine bespoke customer care with flexible freight
-              scheduling—an uncompromised gold standard in transport execution.
+              scheduling: an uncompromised gold standard in transport execution.
             </p>
           </div>
         </div>
@@ -114,7 +113,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Our Services"
             title="Built around your freight, never off the shelf."
-            description="Each service is delivered to the same standard: precise, monitored, and unhurried. We do not sell packages—we execute your movement."
+            description="Each service is delivered to the same standard: precise, monitored, and unhurried. We do not sell packages. We execute your movement."
             action={{ href: "/services", label: "All services" }}
           />
           <ServicesList limit={4} />
@@ -185,7 +184,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Our Values"
             title="Three words. The whole standard."
-            description="Not marketing language—the measure against which every transit is judged."
+            description="Not marketing language. The measure against which every transit is judged."
           />
           <ValuesSection />
         </div>

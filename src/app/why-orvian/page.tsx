@@ -9,7 +9,7 @@ import { whyPoints } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Why Orvian",
   description:
-    "Discretion, 24/7 availability, dedicated contact, cold-chain integrity, and bespoke freight execution—why clients choose Orvian Group Logistics.",
+    "Discretion, 24/7 availability, dedicated contact, cold-chain integrity, and bespoke freight execution. Why clients choose Orvian Group Logistics.",
 };
 
 export default function WhyOrvianPage() {
@@ -28,7 +28,7 @@ export default function WhyOrvianPage() {
           <SectionHeading
             eyebrow="Why Orvian"
             title="The difference is the standard."
-            description="Technology, compliance, and personal accountability—held together so your freight never feels like a commodity."
+            description="Technology, compliance, and personal accountability, held together so your freight never feels like a commodity."
           />
           <div className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
             {whyPoints.map((point, index) => {
@@ -74,7 +74,7 @@ export default function WhyOrvianPage() {
           <SectionHeading
             eyebrow="Our Values"
             title="Three words. The whole standard."
-            description="Not marketing language—the standard against which every interaction is measured."
+            description="Not marketing language. The standard against which every interaction is measured."
           />
           <ValuesSection />
         </div>

@@ -31,7 +31,7 @@ export default function ContactPage() {
               </h2>
               <p className="lead reveal" style={{ ["--delay" as string]: "80ms" }}>
                 Share your dates, cargo profile, temperature requirements and
-                corridors. No form is required to begin—message, call, or email.
+                corridors. No form is required to begin. Message, call, or email.
               </p>
             </div>
 

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Orvian Group Logistics",
   },
   description:
-    "Orvian Group Logistics delivers end-to-end supply chain solutions with absolute precision, reliability, and security—including premier temperature-controlled transportation across the UK and international corridors.",
+    "Orvian Group Logistics delivers end-to-end supply chain solutions with absolute precision, reliability, and security, including premier temperature-controlled transportation across the UK and international corridors.",
   metadataBase: new URL("https://orviangroup.co.uk"),
   openGraph: {
     title: "Orvian Group Logistics",

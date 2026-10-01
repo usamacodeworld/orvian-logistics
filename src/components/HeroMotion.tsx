@@ -7,7 +7,7 @@ export function HeroMotionBackground() {
       <span className="hero-orb hero-orb-a" />
       <span className="hero-orb hero-orb-mobile" />
 
-      {/* Desktop corridor map — right bias */}
+      {/* Desktop corridor map, right bias */}
       <svg
         className="absolute inset-0 hidden h-full w-full lg:block"
         viewBox="0 0 1440 900"
@@ -63,7 +63,7 @@ export function HeroMotionBackground() {
         </g>
       </svg>
 
-      {/* Mobile corridor — lower band only, keeps clear of headline */}
+      {/* Mobile corridor, lower band only */}
       <svg
         className="absolute inset-x-0 bottom-0 h-[42%] w-full lg:hidden"
         viewBox="0 0 390 220"
@@ -173,10 +173,10 @@ export function HeroMotionDesktopPanels() {
         </div>
         <div className="hero-dispatch-track">
           <div className="hero-dispatch-items">
-            <span>LHR → Mayfair · Pharma 2–8°C</span>
+            <span>LHR → Mayfair · Pharma 2-8°C</span>
             <span>Felixstowe → M25 · Fine foods</span>
             <span>Heathrow PT · High-value secure</span>
-            <span>LHR → Mayfair · Pharma 2–8°C</span>
+            <span>LHR → Mayfair · Pharma 2-8°C</span>
             <span>Felixstowe → M25 · Fine foods</span>
             <span>Heathrow PT · High-value secure</span>
           </div>
@@ -231,10 +231,10 @@ export function HeroMotionMobileStrip() {
         </div>
         <div className="hero-dispatch-track">
           <div className="hero-dispatch-items">
-            <span>LHR → Mayfair · Pharma 2–8°C</span>
+            <span>LHR → Mayfair · Pharma 2-8°C</span>
             <span>Felixstowe → M25 · Fine foods</span>
             <span>Heathrow PT · High-value secure</span>
-            <span>LHR → Mayfair · Pharma 2–8°C</span>
+            <span>LHR → Mayfair · Pharma 2-8°C</span>
             <span>Felixstowe → M25 · Fine foods</span>
             <span>Heathrow PT · High-value secure</span>
           </div>

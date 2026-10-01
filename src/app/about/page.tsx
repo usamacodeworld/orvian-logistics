@@ -17,7 +17,7 @@ export default function AboutPage() {
       <Hero
         compact
         title="Precision as a discipline."
-        description="We operate at the intersection of advanced fleet technology and personal service—keeping sensitive cargo moving with the same standard across every corridor."
+        description="We operate at the intersection of advanced fleet technology and personal service, keeping sensitive cargo moving with the same standard across every corridor."
         secondaryCta={{ href: "/contact", label: "Speak with us" }}
       />
 
@@ -40,7 +40,7 @@ export default function AboutPage() {
               </p>
               <p>
                 Rooted in operational discretion and rigorous compliance, Orvian
-                combines bespoke customer care with flexible freight scheduling—
+                combines bespoke customer care with flexible freight scheduling,
                 whether navigating complex city centres or executing across
                 international corridors.
               </p>
@@ -84,7 +84,7 @@ export default function AboutPage() {
               },
               {
                 title: "Sensitive cargo",
-                copy: "Pharmaceuticals, fine food products, and delicate luxury inventory—handled with uninterrupted cold-chain discipline.",
+                copy: "Pharmaceuticals, fine food products, and delicate luxury inventory, handled with uninterrupted cold-chain discipline.",
               },
             ].map((item, i) => (
               <article

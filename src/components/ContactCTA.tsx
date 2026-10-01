@@ -3,7 +3,7 @@ import { site } from "@/lib/content";
 
 export function ContactCTA({
   title = "Speak with us directly.",
-  description = "Orvian Group Logistics is available around the clock. We welcome enquiries by WhatsApp, telephone or email—first conversations before any arrangement is made.",
+  description = "Orvian Group Logistics is available around the clock. We welcome enquiries by WhatsApp, telephone or email. First conversations before any arrangement is made.",
 }: {
   title?: string;
   description?: string;

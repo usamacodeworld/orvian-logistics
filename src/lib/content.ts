@@ -46,7 +46,7 @@ export const services = [
     id: "01",
     title: "Temperature-Controlled Transport",
     description:
-      "State-of-the-art refrigerated units and dual-zone climate fleets for pharmaceuticals, fine foods, and delicate luxury inventory—thermal thresholds held from dispatch to sign-off.",
+      "State-of-the-art refrigerated units and dual-zone climate fleets for pharmaceuticals, fine foods, and delicate luxury inventory, thermal thresholds held from dispatch to sign-off.",
     icon: Thermometer,
   },
   {
@@ -67,7 +67,7 @@ export const services = [
     id: "04",
     title: "Real-Time Telemetry & Climate Sensors",
     description:
-      "Automated climate sensing and continuous telemetry so every transit is monitored, logged, and recoverable—not estimated.",
+      "Automated climate sensing and continuous telemetry so every transit is monitored, logged, and recoverable, not estimated.",
     icon: Radio,
   },
   {
@@ -81,7 +81,7 @@ export const services = [
     id: "06",
     title: "International Corridor Execution",
     description:
-      "End-to-end supply chain support across international routes—compliance-aware, discreet, and built around your commercial rhythm.",
+      "End-to-end supply chain support across international routes, compliance-aware, discreet, and built around your commercial rhythm.",
     icon: Globe2,
   },
 ];
@@ -91,7 +91,7 @@ export const whyPoints = [
     id: "01",
     title: "Absolute Discretion",
     description:
-      "Operational confidentiality is non-negotiable. What moves through Orvian stays with Orvian—client, cargo, and corridor alike.",
+      "Operational confidentiality is non-negotiable. What moves through Orvian stays with Orvian, client, cargo, and corridor alike.",
     icon: Fingerprint,
   },
   {
@@ -112,7 +112,7 @@ export const whyPoints = [
     id: "04",
     title: "Cold-Chain Integrity",
     description:
-      "Dual-zone fleets, sensor-backed thresholds, and uninterrupted monitoring—temperature control as a discipline, not a feature.",
+      "Dual-zone fleets, sensor-backed thresholds, and uninterrupted monitoring, temperature control as a discipline, not a feature.",
     icon: Thermometer,
   },
   {
@@ -129,7 +129,7 @@ export const processSteps = [
     id: "01",
     title: "Initial Enquiry",
     description:
-      "Reach us by phone, WhatsApp or email. Share cargo type, climate needs, corridors and timing—no queue, no friction.",
+      "Reach us by phone, WhatsApp or email. Share cargo type, climate needs, corridors and timing. No queue, no friction.",
     icon: Headset,
   },
   {

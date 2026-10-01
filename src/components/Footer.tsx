@@ -11,7 +11,7 @@ export function Footer() {
             <Logo variant="light" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
               End-to-end supply chain solutions with absolute precision,
-              reliability, and security—cold-chain excellence at the core.
+              reliability, and security. Cold-chain excellence at the core.
             </p>
             <p className="mt-5 text-[0.68rem] tracking-[0.2em] uppercase text-gold">
               {site.values.join(" · ")}

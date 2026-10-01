@@ -17,7 +17,7 @@ export default function ServicesPage() {
       <Hero
         compact
         title="Built around you, never off the shelf."
-        description="Each service is delivered with the same standard: precise, personal, and monitored. We do not offer packages—we offer your logistics plan."
+        description="Each service is delivered with the same standard: precise, personal, and monitored. We do not offer packages. We offer your logistics plan."
         primaryCta={{ href: "/contact", label: "Request a brief" }}
         secondaryCta={{ href: "/why-orvian", label: "Why Orvian" }}
       />
