@@ -36,7 +36,7 @@ export function Header() {
       )}
     >
       <div className="container-x flex h-[4.25rem] items-center justify-between gap-4 md:h-[5rem]">
-        <Logo variant="light" />
+        <Logo tone="dark" className="-ml-1" />
 
         <nav className="hidden items-center gap-8 lg:flex">
           {nav.map((item) =>

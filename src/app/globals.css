@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #231f20;
-  --ink-soft: #3a3536;
-  --gold: #cb802d;
-  --gold-soft: #d9974f;
-  --gold-deep: #a86720;
-  --paper: #f7f4f0;
-  --paper-muted: #ebe6df;
-  --line: rgba(35, 31, 32, 0.1);
+  --ink: #0b1239;
+  --ink-soft: #2a3358;
+  --gold: #0077c0;
+  --gold-soft: #3a9ad9;
+  --gold-deep: #005a94;
+  --paper: #f3f7fb;
+  --paper-muted: #e3ebf4;
+  --line: rgba(11, 18, 57, 0.1);
   --line-light: rgba(255, 255, 255, 0.14);
   --section-y: clamp(4.5rem, 8vw, 7rem);
   --stack: 1.5rem;
@@ -166,9 +166,9 @@ h3.font-display {
 /* Hero */
 .hero-mesh {
   background:
-    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(203, 128, 45, 0.2), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 15% 80%, rgba(203, 128, 45, 0.08), transparent 50%),
-    linear-gradient(165deg, #141112 0%, #231f20 45%, #1a1718 100%);
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(0, 119, 192, 0.2), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 15% 80%, rgba(0, 119, 192, 0.08), transparent 50%),
+    linear-gradient(165deg, #060a24 0%, #0b1239 45%, #0a1030 100%);
 }
 
 .hero-image {
@@ -190,7 +190,7 @@ h3.font-display {
   position: absolute;
   border-radius: 9999px;
   filter: blur(48px);
-  background: radial-gradient(circle, rgba(203, 128, 45, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(0, 119, 192, 0.35), transparent 70%);
   animation: hero-drift 16s ease-in-out infinite;
 }
 
@@ -215,7 +215,7 @@ h3.font-display {
 .hero-mobile-card,
 .hero-mobile-dispatch {
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(20, 17, 18, 0.78);
+  background: rgba(6, 10, 36, 0.78);
   backdrop-filter: blur(12px);
   padding: 0.85rem 0.95rem;
 }
@@ -355,15 +355,15 @@ h3.font-display {
 }
 
 .hero-truck-ride {
-  filter: drop-shadow(0 0 8px rgba(203, 128, 45, 0.55));
+  filter: drop-shadow(0 0 8px rgba(0, 119, 192, 0.55));
 }
 
 .hero-panel {
   position: absolute;
-  width: min(240px, 72vw);
+  width: min(260px, 72vw);
   padding: 0.9rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(20, 17, 18, 0.72);
+  background: rgba(6, 10, 36, 0.72);
   backdrop-filter: blur(12px);
   color: rgba(255, 255, 255, 0.82);
   animation: panel-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -384,19 +384,19 @@ h3.font-display {
   height: 0.38rem;
   border-radius: 9999px;
   background: var(--gold);
-  box-shadow: 0 0 0 0 rgba(203, 128, 45, 0.5);
+  box-shadow: 0 0 0 0 rgba(0, 119, 192, 0.5);
   animation: chip-pulse 2s ease-out infinite;
 }
 
 @keyframes chip-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(203, 128, 45, 0.55);
+    box-shadow: 0 0 0 0 rgba(0, 119, 192, 0.55);
   }
   70% {
-    box-shadow: 0 0 0 7px rgba(203, 128, 45, 0);
+    box-shadow: 0 0 0 7px rgba(0, 119, 192, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(203, 128, 45, 0);
+    box-shadow: 0 0 0 0 rgba(0, 119, 192, 0);
   }
 }
 
@@ -454,7 +454,7 @@ h3.font-display {
   display: block;
   height: 100%;
   width: 68%;
-  background: linear-gradient(90deg, #cb802d, #e0a35a);
+  background: linear-gradient(90deg, #0077c0, #4fb0ea);
   animation: temp-bar 5s ease-in-out infinite;
 }
 
@@ -489,19 +489,31 @@ h3.font-display {
 
 .hero-fleet-list li {
   display: grid;
-  grid-template-columns: 1rem 1fr auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 0.55rem;
+  gap: 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   font-size: 0.72rem;
   color: rgba(255, 255, 255, 0.78);
 }
 
+.hero-fleet-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.hero-fleet-list li span {
+  white-space: nowrap;
+}
+
 .hero-fleet-list li em {
+  white-space: nowrap;
   font-style: normal;
   font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-soft);
 }
 
 .hero-fleet-list li:nth-child(2) em {
@@ -693,7 +705,7 @@ h3.font-display {
 .lift-card:hover {
   transform: translateY(-6px);
   border-color: color-mix(in srgb, var(--gold) 45%, var(--line));
-  box-shadow: 0 18px 40px rgba(35, 31, 32, 0.08);
+  box-shadow: 0 18px 40px rgba(11, 18, 57, 0.08);
 }
 
 .stat-cell {
@@ -734,7 +746,7 @@ h3.font-display {
 .btn-primary:hover {
   background: var(--gold-deep);
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(203, 128, 45, 0.28);
+  box-shadow: 0 10px 24px rgba(0, 119, 192, 0.28);
 }
 
 .btn-ghost {
@@ -744,7 +756,7 @@ h3.font-display {
 
 .btn-ghost:hover {
   border-color: var(--gold);
-  background: rgba(203, 128, 45, 0.12);
+  background: rgba(0, 119, 192, 0.12);
   transform: translateY(-2px);
 }
 
@@ -754,9 +766,9 @@ h3.font-display {
 }
 
 .btn-ink:hover {
-  background: #000;
+  background: #060a24;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(35, 31, 32, 0.2);
+  box-shadow: 0 10px 24px rgba(11, 18, 57, 0.2);
 }
 
 .promise-band {

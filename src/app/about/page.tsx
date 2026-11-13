@@ -20,6 +20,7 @@ export default function AboutPage() {
         motion="about"
         title="Precision as a discipline."
         description="We operate at the intersection of advanced fleet technology and personal service, keeping sensitive cargo moving with the same standard across every corridor."
+        imageSrc="/photos/glacier.jpg"
         secondaryCta={{ href: "/contact", label: "Speak with us" }}
       />
 
@@ -51,10 +52,10 @@ export default function AboutPage() {
 
           <div className="reveal-scale relative min-h-[340px] overflow-hidden bg-ink lg:min-h-full">
             <Image
-              src={withBase("/brand/operations.png")}
+              src={withBase("/photos/scanner.jpg")}
               alt="Orvian logistics operations"
               fill
-              className="object-cover opacity-80 transition duration-[1.2s] hover:scale-105"
+              className="object-cover opacity-90 transition duration-[1.2s] hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 50vw"
               unoptimized
             />

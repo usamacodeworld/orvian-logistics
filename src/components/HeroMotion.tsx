@@ -31,7 +31,7 @@ export function HeroMotionBackground({ theme = "home" }: Props) {
           <path
             className="hero-route"
             d={routes.desktop.primary}
-            stroke="rgba(203,128,45,0.4)"
+            stroke="rgba(0,119,192,0.4)"
             strokeWidth="1.4"
           />
           <path
@@ -46,8 +46,8 @@ export function HeroMotionBackground({ theme = "home" }: Props) {
               className={i === 1 ? "hero-hub hero-hub-delay" : "hero-hub"}
               transform={`translate(${hub.x} ${hub.y})`}
             >
-              <circle r="10" fill="rgba(203,128,45,0.15)" stroke="#cb802d" strokeWidth="1" />
-              <circle r="3" fill="#cb802d" />
+              <circle r="10" fill="rgba(0,119,192,0.15)" stroke="#0077c0" strokeWidth="1" />
+              <circle r="3" fill="#0077c0" />
             </g>
           ))}
           <g className="hero-truck-ride">
@@ -81,7 +81,7 @@ export function HeroMotionBackground({ theme = "home" }: Props) {
         <path
           className="hero-route"
           d={routes.mobile.primary}
-          stroke="rgba(203,128,45,0.45)"
+          stroke="rgba(0,119,192,0.45)"
           strokeWidth="1.5"
         />
         <path
@@ -126,10 +126,10 @@ export function HeroMotionMobileStrip({ theme = "home" }: Props) {
 function TruckGlyph({ scale = 1.15 }: { scale?: number }) {
   return (
     <g transform={`translate(-18 -10) scale(${scale})`}>
-      <rect x="0" y="4" width="22" height="12" rx="1.5" fill="#cb802d" />
+      <rect x="0" y="4" width="22" height="12" rx="1.5" fill="#0077c0" />
       <rect x="22" y="7" width="10" height="9" rx="1" fill="#e8a04a" />
-      <circle cx="7" cy="17" r="2.4" fill="#231f20" stroke="#f7f4f0" strokeWidth="0.8" />
-      <circle cx="26" cy="17" r="2.4" fill="#231f20" stroke="#f7f4f0" strokeWidth="0.8" />
+      <circle cx="7" cy="17" r="2.4" fill="#0b1239" stroke="#f3f7fb" strokeWidth="0.8" />
+      <circle cx="26" cy="17" r="2.4" fill="#0b1239" stroke="#f3f7fb" strokeWidth="0.8" />
     </g>
   );
 }
@@ -137,8 +137,8 @@ function TruckGlyph({ scale = 1.15 }: { scale?: number }) {
 function PackageGlyph() {
   return (
     <g transform="translate(-6 -6)">
-      <rect width="12" height="12" rx="1" fill="rgba(255,255,255,0.85)" stroke="#cb802d" strokeWidth="1" />
-      <path d="M1 4h10M6 4v8" stroke="#cb802d" strokeWidth="0.8" />
+      <rect width="12" height="12" rx="1" fill="rgba(255,255,255,0.85)" stroke="#0077c0" strokeWidth="1" />
+      <path d="M1 4h10M6 4v8" stroke="#0077c0" strokeWidth="0.8" />
     </g>
   );
 }
@@ -148,7 +148,7 @@ function ShieldGlyph() {
     <g transform="translate(-8 -9)">
       <path
         d="M8 1 L15 4 V9 C15 13 11 16 8 17 C5 16 1 13 1 9 V4 Z"
-        fill="#cb802d"
+        fill="#0077c0"
         opacity="0.95"
       />
     </g>
@@ -159,7 +159,7 @@ function TempGlyph() {
   return (
     <g transform="translate(-4 -10)">
       <rect x="2.5" y="0" width="3" height="12" rx="1.5" fill="#fff" />
-      <circle cx="4" cy="14" r="4" fill="#cb802d" />
+      <circle cx="4" cy="14" r="4" fill="#0077c0" />
     </g>
   );
 }

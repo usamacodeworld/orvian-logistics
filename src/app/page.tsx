@@ -80,14 +80,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-paper pb-[var(--section-y)] -mt-6">
+        <div className="container-x grid gap-4 md:grid-cols-3">
+          {[
+            { src: "/photos/loading.jpg", label: "Dedicated freight" },
+            { src: "/photos/courier.jpg", label: "Personal service" },
+            { src: "/photos/frozen-fruit.jpg", label: "Cold-chain integrity" },
+          ].map((item, i) => (
+            <figure
+              key={item.src}
+              className="reveal-scale group relative aspect-[4/3] overflow-hidden bg-ink"
+              style={{ ["--delay" as string]: `${i * 90}ms` }}
+            >
+              <Image
+                src={withBase(item.src)}
+                alt={item.label}
+                fill
+                unoptimized
+                className="object-cover transition duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent" />
+              <figcaption className="absolute bottom-4 left-5 text-[0.7rem] tracking-[0.18em] uppercase text-white">
+                {item.label}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
       <section className="promise-band relative overflow-hidden bg-ink text-white section-y">
-        <div className="absolute inset-0 opacity-25">
+        <div className="absolute inset-0 opacity-35">
           <Image
-            src={withBase("/brand/operations.png")}
+            src={withBase("/photos/containers.jpg")}
             alt=""
             fill
             className="object-cover scale-105"
             sizes="100vw"
+            unoptimized
           />
           <div className="absolute inset-0 bg-ink/85" />
         </div>

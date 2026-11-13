@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { withBase } from "@/lib/paths";
 import { site } from "@/lib/content";
 
 export function ContactCTA({
@@ -10,6 +12,17 @@ export function ContactCTA({
 }) {
   return (
     <section className="relative overflow-hidden bg-ink text-white">
+      <div className="pointer-events-none absolute inset-0">
+        <Image
+          src={withBase("/photos/sea.jpg")}
+          alt=""
+          fill
+          unoptimized
+          className="object-cover opacity-30"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
+      </div>
       <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-gold/15 blur-3xl" />
       <div className="container-x relative section-y">
         <div className="section-head max-w-2xl">

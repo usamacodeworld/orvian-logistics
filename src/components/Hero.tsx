@@ -57,7 +57,7 @@ export function Hero({
   primaryCta = { href: "/contact", label: "Begin an enquiry" },
   secondaryCta = { href: "/services", label: "Explore services" },
   compact = false,
-  imageSrc = "/brand/operations.png",
+  imageSrc = "/photos/night-truck.jpg",
   motion = "home",
 }: Props) {
   return (
@@ -72,7 +72,7 @@ export function Hero({
           alt="Orvian Group Logistics operations"
           fill
           priority
-          className="hero-image object-cover opacity-[0.42]"
+          className="hero-image object-cover opacity-[0.5]"
           sizes="100vw"
           unoptimized
         />

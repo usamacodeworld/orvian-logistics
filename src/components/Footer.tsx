@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container-x section-y !pb-10">
         <div className="grid gap-10 md:grid-cols-3 md:gap-12">
           <div>
-            <Logo variant="light" />
+            <Logo tone="dark" className="[&_img]:!h-20 md:[&_img]:!h-24" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
               End-to-end supply chain solutions with absolute precision,
               reliability, and security. Cold-chain excellence at the core.
