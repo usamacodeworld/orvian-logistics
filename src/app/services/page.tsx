@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { photos } from "@/lib/photos";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServicesList } from "@/components/ServicesList";
@@ -17,14 +18,14 @@ export default function ServicesPage() {
       <Hero
         compact
         motion="services"
-        imageSrc="/photos/cold-meat.jpg"
+        images={[photos.coldMeat, photos.frozenFruit, photos.scanner]}
         title="Built around you, never off the shelf."
         description="Each service is delivered with the same standard: precise, personal, and monitored. We do not offer packages. We offer your logistics plan."
         primaryCta={{ href: "/contact", label: "Request a brief" }}
         secondaryCta={{ href: "/why-orvian", label: "Why Orvian" }}
       />
 
-      <section className="section-y bg-paper">
+      <section className="section-y tone-light">
         <div className="container-x section-stack">
           <SectionHeading
             eyebrow="Capabilities"
@@ -33,7 +34,7 @@ export default function ServicesPage() {
           />
           <ServicesList />
 
-          <div className="reveal grid gap-8 border border-[var(--line)] bg-white p-8 md:grid-cols-[1.2fr_0.8fr] md:items-center md:gap-12 md:p-10">
+          <div className="reveal grid gap-8 border border-[var(--line)] bg-card p-8 md:grid-cols-[1.2fr_0.8fr] md:items-center md:gap-12 md:p-10">
             <div>
               <p className="eyebrow">Flagship</p>
               <h3 className="font-display mt-4 text-2xl md:text-[1.75rem]">

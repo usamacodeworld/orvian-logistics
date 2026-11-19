@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import {
   HeroMotionBackground,
@@ -7,7 +6,8 @@ import {
   HeroMotionMobileStrip,
   type MotionTheme,
 } from "./HeroMotion";
-import { withBase } from "@/lib/paths";
+import { Slides } from "./Slides";
+import { photos, type Photo } from "@/lib/photos";
 
 type Props = {
   eyebrow?: string;
@@ -16,7 +16,7 @@ type Props = {
   primaryCta?: { href: string; label: string };
   secondaryCta?: { href: string; label: string };
   compact?: boolean;
-  imageSrc?: string;
+  images?: Photo[];
   motion?: MotionTheme;
 };
 
@@ -57,7 +57,7 @@ export function Hero({
   primaryCta = { href: "/contact", label: "Begin an enquiry" },
   secondaryCta = { href: "/services", label: "Explore services" },
   compact = false,
-  imageSrc = "/photos/night-truck.jpg",
+  images = [photos.nightTruck, photos.containers, photos.loading],
   motion = "home",
 }: Props) {
   return (
@@ -67,15 +67,9 @@ export function Hero({
       }`}
     >
       <div className="absolute inset-0 overflow-hidden">
-        <Image
-          src={withBase(imageSrc)}
-          alt="Orvian Group Logistics operations"
-          fill
-          priority
-          className="hero-image object-cover opacity-[0.5]"
-          sizes="100vw"
-          unoptimized
-        />
+        <div className="absolute inset-0 opacity-[0.55]">
+          <Slides images={images} priority />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-ink from-0% via-ink/92 via-45% to-ink/55" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-transparent to-ink/50" />
       </div>

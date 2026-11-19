@@ -4,11 +4,15 @@ import { site, nav } from "@/lib/content";
 
 export function Footer() {
   return (
-    <footer className="bg-ink text-white">
+    <footer className="border-t border-white/10 bg-[#060a24] text-white">
       <div className="container-x section-y !pb-10">
         <div className="grid gap-10 md:grid-cols-3 md:gap-12">
           <div>
             <Logo tone="dark" className="[&_img]:!h-20 md:[&_img]:!h-24" />
+            <p className="mt-5 font-display text-lg text-white">Moving Business Forward.</p>
+            <p className="mt-1 text-[0.72rem] tracking-[0.14em] uppercase text-gold-soft">
+              Reliable logistics. Responsible transport. A greener tomorrow.
+            </p>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
               End-to-end supply chain solutions with absolute precision,
               reliability, and security. Cold-chain excellence at the core.

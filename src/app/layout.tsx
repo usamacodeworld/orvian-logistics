@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Roboto, Sulphur_Point } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { RevealProvider } from "@/components/RevealProvider";
 import "./globals.css";
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const inter = Inter({
+  variable: "--f-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  display: "swap",
 });
 
-const sulphur = Sulphur_Point({
-  variable: "--font-sulphur",
+const manrope = Manrope({
+  variable: "--f-head",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en-GB"
-      className={`${roboto.variable} ${sulphur.variable} h-full antialiased`}
+      className={`${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <RevealProvider>

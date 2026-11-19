@@ -16,7 +16,7 @@ export function ValuesSection() {
         {site.values.map((value, index) => (
           <article
             key={value}
-            className="lift-card reveal-scale group bg-paper p-8 md:p-10"
+            className="lift-card reveal-scale group bg-card p-8 md:p-10"
             style={{ ["--delay" as string]: `${index * 100}ms` }}
           >
             <p className="text-[0.68rem] tracking-[0.22em] uppercase text-gold">

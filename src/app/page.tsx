@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Leaf } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServicesList } from "@/components/ServicesList";
@@ -8,6 +9,7 @@ import { ValuesSection } from "@/components/ValuesSection";
 import { ContactCTA } from "@/components/ContactCTA";
 import { stats, whyPoints } from "@/lib/content";
 import { withBase } from "@/lib/paths";
+import { PhotoMarquee } from "@/components/PhotoMarquee";
 
 export default function HomePage() {
   return (
@@ -15,10 +17,11 @@ export default function HomePage() {
       <Hero
         motion="home"
         title="Commerce moves. We hold the line."
+        eyebrow="Moving Business Forward"
         description="End-to-end supply chain solutions tailored for businesses that require absolute precision, reliability, and security. Cold-chain excellence at the core, available around the clock."
       />
 
-      <section id="about" className="scroll-mt-24 section-y bg-paper">
+      <section id="about" className="scroll-mt-24 section-y tone-light">
         <div className="container-x">
           <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col">
@@ -80,37 +83,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-paper pb-[var(--section-y)] -mt-6">
-        <div className="container-x grid gap-4 md:grid-cols-3">
-          {[
-            { src: "/photos/loading.jpg", label: "Dedicated freight" },
-            { src: "/photos/courier.jpg", label: "Personal service" },
-            { src: "/photos/frozen-fruit.jpg", label: "Cold-chain integrity" },
-          ].map((item, i) => (
-            <figure
-              key={item.src}
-              className="reveal-scale group relative aspect-[4/3] overflow-hidden bg-ink"
-              style={{ ["--delay" as string]: `${i * 90}ms` }}
-            >
-              <Image
-                src={withBase(item.src)}
-                alt={item.label}
-                fill
-                unoptimized
-                className="object-cover transition duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent" />
-              <figcaption className="absolute bottom-4 left-5 text-[0.7rem] tracking-[0.18em] uppercase text-white">
-                {item.label}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      <section className="promise-band relative overflow-hidden bg-ink text-white section-y">
-        <div className="absolute inset-0 opacity-35">
+      <section className="promise-band relative overflow-hidden text-white section-y">
+        <div className="absolute inset-0 opacity-60">
           <Image
             src={withBase("/photos/containers.jpg")}
             alt=""
@@ -119,7 +93,7 @@ export default function HomePage() {
             sizes="100vw"
             unoptimized
           />
-          <div className="absolute inset-0 bg-ink/85" />
+          <div className="absolute inset-0 bg-gradient-to-br from-navy/90 to-navy-2/80" />
         </div>
         <div className="container-x relative">
           <div className="section-head max-w-3xl">
@@ -140,7 +114,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-y bg-paper">
+      <section id="mission" className="scroll-mt-24 section-y tone-light">
+        <div className="container-x grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div className="section-head">
+            <p className="eyebrow reveal">Our Mission</p>
+            <h2 className="font-display reveal text-[1.85rem] leading-[1.15] md:text-[2.35rem]">
+              Keeping businesses moving and supply chains connected.
+            </h2>
+            <div className="line-rule reveal mt-2" />
+          </div>
+          <div className="reveal-left space-y-5 border-l-2 border-gold pl-6 text-[0.98rem] leading-relaxed text-ink-soft/85 md:pl-8 md:text-base md:leading-[1.75]">
+            <p>
+              At Orvian Group Logistics, our mission is to deliver reliable,
+              efficient and innovative transport solutions that keep businesses
+              moving and supply chains connected.
+            </p>
+            <p>
+              Specialising in refrigerated, frozen, chilled and ambient
+              transportation, we are committed to maintaining the highest standards
+              of service, professionalism and operational excellence.
+            </p>
+            <p>
+              Through strong partnerships, forward-thinking solutions and a
+              customer-first approach, we aim to become a trusted logistics
+              partner, delivering excellence at every stage of the journey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y tone-dark">
         <div className="container-x section-stack">
           <SectionHeading
             eyebrow="Our Services"
@@ -164,7 +167,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-y border-y border-[var(--line)] bg-white">
+      <section className="section-y tone-light">
         <div className="container-x section-stack">
           <SectionHeading
             eyebrow="Why Orvian"
@@ -200,7 +203,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-y bg-paper">
+      <section className="section-y tone-dark">
         <div className="container-x section-stack">
           <SectionHeading
             eyebrow="How it works"
@@ -211,7 +214,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-y bg-white">
+      <section className="section-y tone-light">
         <div className="container-x section-stack">
           <SectionHeading
             eyebrow="Our Values"
@@ -222,7 +225,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="overflow-hidden border-y border-[var(--line)] bg-ink py-3.5 text-white/55">
+      <section id="sustainability" className="relative overflow-hidden tone-dark text-white section-y">
+        <div className="pointer-events-none absolute inset-0">
+          <Image
+            src={withBase("/photos/glacier.jpg")}
+            alt=""
+            fill
+            unoptimized
+            className="object-cover opacity-25"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/60" />
+        </div>
+        <div className="container-x relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div className="section-head max-w-none">
+            <p className="eyebrow reveal inline-flex items-center gap-2">
+              <Leaf className="h-4 w-4" strokeWidth={1.5} />
+              Sustainability
+            </p>
+            <h2 className="font-display reveal text-[1.85rem] leading-[1.15] md:text-[2.6rem]">
+              Driving towards a greener future.
+            </h2>
+            <div className="reveal space-y-4 text-[0.98rem] leading-relaxed text-white/70 md:text-base md:leading-[1.75]">
+              <p>
+                At Orvian Group Logistics, we recognise that the future of logistics
+                must be sustainable.
+              </p>
+              <p>
+                We are committed to reducing our environmental impact by embracing
+                cleaner transport solutions, including the introduction and use of
+                electric delivery vehicles wherever operationally practical.
+              </p>
+              <p>
+                By investing in greener technologies, improving transport efficiency
+                and reducing unnecessary emissions, we aim to contribute towards
+                cleaner air, lower carbon emissions and a more sustainable future.
+              </p>
+            </div>
+          </div>
+          <div className="reveal-scale flex flex-col justify-center gap-6 border border-white/12 bg-navy/60 p-8 backdrop-blur-sm md:p-10">
+            <p className="font-display text-xl leading-snug md:text-[1.45rem]">
+              Our ambition is simple: to deliver for our customers while taking
+              greater responsibility for the planet we share.
+            </p>
+            <p className="border-t border-white/12 pt-5 text-sm leading-relaxed text-gold-soft">
+              Because moving goods forward should never mean leaving the
+              environment behind.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y tone-light overflow-hidden">
+        <div className="container-x section-stack">
+          <SectionHeading
+            eyebrow="Our Operations"
+            title="Precision, seen in every journey."
+            description="From cold stores to open roads, a look at the fleets, people and facilities behind every consignment."
+          />
+        </div>
+        <div className="mt-10">
+          <PhotoMarquee />
+        </div>
+      </section>
+
+      <div className="overflow-hidden border-y border-[var(--line)] bg-gold py-3.5 text-white">
         <div className="marquee-track flex w-max gap-10 whitespace-nowrap text-[0.68rem] tracking-[0.28em] uppercase">
           {Array.from({ length: 2 }).map((_, i) => (
             <div key={i} className="flex gap-10 px-5">
@@ -237,13 +304,14 @@ export default function HomePage() {
               ].map((item) => (
                 <span key={`${i}-${item}`} className="inline-flex items-center gap-10">
                   {item}
-                  <span className="text-gold">◆</span>
+                  <span className="text-white/60">◆</span>
                 </span>
               ))}
             </div>
           ))}
         </div>
       </div>
+
 
       <ContactCTA />
     </>

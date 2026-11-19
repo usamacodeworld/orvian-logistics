@@ -6,8 +6,11 @@
   --gold: #0077c0;
   --gold-soft: #3a9ad9;
   --gold-deep: #005a94;
-  --paper: #f3f7fb;
-  --paper-muted: #e3ebf4;
+  --paper: #eaf3fc;
+  --paper-muted: #d8e6f5;
+  --card: #ffffff;
+  --navy: #0b1239;
+  --navy-2: #0f1d5c;
   --line: rgba(11, 18, 57, 0.1);
   --line-light: rgba(255, 255, 255, 0.14);
   --section-y: clamp(4.5rem, 8vw, 7rem);
@@ -24,8 +27,10 @@
   --color-gold-deep: var(--gold-deep);
   --color-paper: var(--paper);
   --color-paper-muted: var(--paper-muted);
-  --font-display: var(--font-sulphur);
-  --font-sans: var(--font-roboto);
+  --color-card: var(--card);
+  --color-navy: var(--navy);
+  --font-display: var(--f-head);
+  --font-sans: var(--f-body);
 }
 
 html {
@@ -35,7 +40,7 @@ html {
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--font-roboto), system-ui, sans-serif;
+  font-family: var(--f-body), system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -46,15 +51,16 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-sulphur), var(--font-roboto), sans-serif;
-  letter-spacing: 0;
+  font-family: var(--f-head), var(--f-body), sans-serif;
+  letter-spacing: -0.015em;
   word-spacing: normal;
+  font-weight: 600;
 }
 
 h1.font-display,
 h2.font-display,
 h3.font-display {
-  letter-spacing: 0;
+  letter-spacing: -0.015em;
   word-spacing: 0;
 }
 
@@ -229,7 +235,7 @@ h3.font-display {
 }
 
 .hero-mobile-temp > span {
-  font-family: var(--font-sulphur), sans-serif;
+  font-family: var(--f-head), sans-serif;
   font-size: 1.55rem;
   line-height: 1;
   color: #fff;
@@ -422,7 +428,7 @@ h3.font-display {
 }
 
 .hero-temp-num {
-  font-family: var(--font-sulphur), sans-serif;
+  font-family: var(--f-head), sans-serif;
   font-size: 1.85rem;
   line-height: 1;
   animation: temp-tick 4s ease-in-out infinite;
@@ -805,6 +811,8 @@ h3.font-display {
   .scroll-cue-line,
   .marquee-track,
   .hero-image,
+  .photo-marquee,
+  .slide.is-active img,
   .hero-orb,
   .hero-route,
   .hero-truck-ride,
@@ -820,4 +828,58 @@ h3.font-display {
     transform: none !important;
     filter: none !important;
   }
+}
+
+/* Section tones: alternate light blue and dark blue for easy navigation */
+.tone-light {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.tone-dark {
+  --ink: #f3f7fb;
+  --ink-soft: #d3def0;
+  --line: rgba(255, 255, 255, 0.14);
+  --card: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: #fff;
+}
+
+.tone-dark .btn-ink {
+  background: var(--gold);
+  color: #fff;
+}
+
+.tone-dark .btn-ink:hover {
+  background: var(--gold-deep);
+}
+
+.tone-dark .eyebrow {
+  color: var(--gold-soft);
+}
+
+.tone-dark .text-gold {
+  color: var(--gold-soft);
+}
+
+/* Rotating photos */
+.slide {
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+}
+
+.slide.is-active {
+  opacity: 1;
+}
+
+.slide.is-active img {
+  animation: kenburns 9s ease-out forwards;
+}
+
+.photo-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+.photo-marquee-wrap:hover .photo-marquee {
+  animation-play-state: paused;
 }

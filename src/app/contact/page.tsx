@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { photos } from "@/lib/photos";
 import { Hero } from "@/components/Hero";
 import { site } from "@/lib/content";
 import { MessageCircle, Phone, Mail } from "lucide-react";
@@ -16,14 +17,14 @@ export default function ContactPage() {
       <Hero
         compact
         motion="contact"
-        imageSrc="/photos/courier.jpg"
+        images={[photos.courier, photos.vanRoad, photos.sea]}
         title="Speak with us directly."
         description="Orvian Group Logistics is available around the clock. First-time clients are invited to speak with a member of our team before any arrangement is made."
         primaryCta={{ href: site.whatsapp, label: "Message on WhatsApp" }}
         secondaryCta={{ href: site.phoneHref, label: `Call ${site.phone}` }}
       />
 
-      <section className="section-y bg-paper">
+      <section className="section-y tone-light">
         <div className="container-x grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <div className="section-head">
@@ -63,7 +64,7 @@ export default function ContactPage() {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="lift-card reveal flex items-center gap-4 border border-[var(--line)] bg-white px-5 py-4"
+                    className="lift-card reveal flex items-center gap-4 border border-[var(--line)] bg-card px-5 py-4"
                     style={{ ["--delay" as string]: `${i * 80}ms` }}
                     target={item.href.startsWith("http") ? "_blank" : undefined}
                     rel={item.href.startsWith("http") ? "noreferrer" : undefined}

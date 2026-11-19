@@ -9,7 +9,7 @@ export function ProcessSection() {
           return (
             <article
               key={step.id}
-              className="lift-card reveal-scale border border-[var(--line)] bg-white p-7"
+              className="lift-card reveal-scale border border-[var(--line)] bg-card p-7"
               style={{ ["--delay" as string]: `${index * 90}ms` }}
             >
               <div className="flex items-center justify-between">

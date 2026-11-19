@@ -11,7 +11,7 @@ export function ContactCTA({
   description?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink text-white">
+    <section className="relative overflow-hidden bg-navy text-white">
       <div className="pointer-events-none absolute inset-0">
         <Image
           src={withBase("/photos/sea.jpg")}
@@ -21,7 +21,7 @@ export function ContactCTA({
           className="object-cover opacity-30"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/40" />
       </div>
       <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-gold/15 blur-3xl" />
       <div className="container-x relative section-y">

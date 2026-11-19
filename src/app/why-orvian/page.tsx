@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { photos } from "@/lib/photos";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProcessSection } from "@/components/ProcessSection";
@@ -18,14 +19,14 @@ export default function WhyOrvianPage() {
       <Hero
         compact
         motion="why"
-        imageSrc="/photos/van-road.jpg"
+        images={[photos.vanRoad, photos.nightTruck, photos.courier]}
         title="Rare, on the client's terms."
         description="There is no shortage of logistics services. What is rare is depth of cold-chain capability paired with the discretion genuine high-value freight demands."
         primaryCta={{ href: "/contact", label: "Begin an enquiry" }}
         secondaryCta={{ href: "#process", label: "See our process" }}
       />
 
-      <section className="section-y bg-paper">
+      <section className="section-y tone-light">
         <div className="container-x section-stack">
           <SectionHeading
             eyebrow="Why Orvian"
@@ -60,7 +61,7 @@ export default function WhyOrvianPage() {
         </div>
       </section>
 
-      <section className="section-y bg-white">
+      <section className="section-y tone-dark">
         <div className="container-x section-stack">
           <SectionHeading
             eyebrow="How it works"
@@ -71,7 +72,7 @@ export default function WhyOrvianPage() {
         </div>
       </section>
 
-      <section className="section-y bg-paper">
+      <section className="section-y tone-light">
         <div className="container-x section-stack">
           <SectionHeading
             eyebrow="Our Values"

@@ -5,6 +5,7 @@ import { Hero } from "@/components/Hero";
 import { ContactCTA } from "@/components/ContactCTA";
 import { stats } from "@/lib/content";
 import { withBase } from "@/lib/paths";
+import { photos } from "@/lib/photos";
 
 export const metadata: Metadata = {
   title: "About",
@@ -20,11 +21,11 @@ export default function AboutPage() {
         motion="about"
         title="Precision as a discipline."
         description="We operate at the intersection of advanced fleet technology and personal service, keeping sensitive cargo moving with the same standard across every corridor."
-        imageSrc="/photos/glacier.jpg"
+        images={[photos.glacier, photos.loading, photos.containers]}
         secondaryCta={{ href: "/contact", label: "Speak with us" }}
       />
 
-      <section className="section-y bg-paper">
+      <section className="section-y tone-light">
         <div className="container-x grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col">
             <div className="section-head">
@@ -50,7 +51,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="reveal-scale relative min-h-[340px] overflow-hidden bg-ink lg:min-h-full">
+          <div className="reveal-scale relative min-h-[340px] overflow-hidden bg-navy lg:min-h-full">
             <Image
               src={withBase("/photos/scanner.jpg")}
               alt="Orvian logistics operations"
@@ -67,7 +68,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-y bg-white">
+      <section className="section-y tone-dark">
         <div className="container-x section-stack">
           <div className="section-head max-w-3xl">
             <p className="eyebrow reveal">Cold chain at the core</p>
